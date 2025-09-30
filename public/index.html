@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>File Upload & Search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+        input, button {
+            padding: 8px;
+            margin: 5px 0;
+            width: 100%;
+        }
+        .results {
+            margin-top: 20px;
+        }
+        .file-item {
+            border: 1px solid #ccc;
+            padding: 8px;
+            margin: 5px 0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Upload File</h2>
+    <input type="file" id="fileInput"><br>
+    <input type="text" id="productId" placeholder="Enter Application Code"><br>
+    <button onclick="uploadFile()">Upload</button>
+
+    <h2>Search Files</h2>
+    <input type="text" id="searchBox" placeholder="Enter Application Code">
+    <button onclick="searchFiles()">Search</button>
+
+    <div class="results" id="results"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
