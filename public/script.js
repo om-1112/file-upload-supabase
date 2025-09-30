@@ -1,30 +1,34 @@
 // 📤 Upload file
 async function uploadFile() {
-    const fileInput = document.getElementById('fileInput');
-    const productId = document.getElementById('productId').value;
-
-    if (!fileInput.files.length || !productId) {
-        alert("Please select a file and enter Application Code.");
+    const fileInput = document.getElementById("fileInput");
+    if (fileInput.files.length === 0) {
+        alert("Please select a file!");
         return;
     }
 
     const formData = new FormData();
     formData.append("file", fileInput.files[0]);
-    formData.append("product_id", productId);
 
     try {
-        const res = await fetch("/upload", {
+        const response = await fetch("/upload", {  // 🔥 relative path
             method: "POST",
-            body: formData
+            body: formData,
         });
 
-        const data = await res.json();
-        alert(data.msg || "Upload finished");
+        if (!response.ok) {
+            throw new Error("Server error: " + response.status);
+        }
+
+        const data = await response.json();
+        console.log("✅ Upload success:", data);
+        alert("Upload successful: " + data.originalname);
     } catch (err) {
-        console.error("Upload error:", err);
-        alert("Upload failed");
+        console.error("❌ Upload error:", err);
+        alert("Upload failed: " + err.message);
     }
 }
+
+
 
 // 🔍 Search files by Application Code
 async function searchFiles() {

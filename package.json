@@ -1,29 +1,64 @@
 {
   
   "name": "file-upload-supabase",
+  
   "version": "1.0.0",
+  
   "description": "",
+  
   "main": "server.js",
+  
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+  
+    
+  "test": "echo \"Error: no test specified\" && exit 1",
+  
+    
+  "start": "node server.js"
+  
   },
+  
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/om-1112/file-upload-supabase.git"
+  
+    
+  "type": "git",
+  
+    
+  "url": "git+https://github.com/om-1112/file-upload-supabase.git"
+  
   },
+  
   "keywords": [],
+  
   "author": "",
+  
   "license": "ISC",
+  
   "bugs": {
-    "url": "https://github.com/om-1112/file-upload-supabase/issues"
+  
+    
+  "url": "https://github.com/om-1112/file-upload-supabase/issues"
+  
   },
+  
   "homepage": "https://github.com/om-1112/file-upload-supabase#readme",
+  
   "dependencies": {
-    "@supabase/supabase-js": "^2.58.0",
-    "cors": "^2.8.5",
-    "dotenv": "^17.2.3",
-    "express": "^5.1.0",
-    "multer": "^2.0.2"
+  
+    
+  "@supabase/supabase-js": "^2.58.0",
+  
+    
+  "cors": "^2.8.5",
+  
+    
+  "dotenv": "^17.2.3",
+  
+    
+  "express": "^5.1.0",
+  
+    
+  "multer": "^2.0.2"
+  
   }
 }
